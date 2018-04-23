@@ -21,6 +21,6 @@ def lemmatization(name):
     name = ''.join(i for i in name if i in letters)
     name = name.replace('.', '').replace(',', '')
     
-    name = ' '.join([morph.parse(i)[0].normal_form for i in name.split(' ')[:20]])
+    name =  ' '.join([morph.parse(i)[0].normal_form for i in name.split(' ')])
     name += ' '
     return name
