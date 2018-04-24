@@ -23,4 +23,5 @@ def lemmatization(name):
     
     name =  ' '.join([morph.parse(i)[0].normal_form for i in name.split(' ')])
     name += ' '
+
     return name
