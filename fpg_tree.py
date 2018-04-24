@@ -62,6 +62,7 @@ class FPNode(object):
         self._count = count
         self._parent = None
         self._children = {}
+        self._neighbor = None
 
     def add(self, child):
         """Add the given FPNode `child` as a child of this node."""
@@ -112,6 +113,13 @@ class FPNode(object):
         """True if this node is the root of a tree; false if otherwise."""
         return self._item is None and self._count is None
 
+
+    def neighbor(self):
+        """
+        The node's neighbor; the one with the same value that is "to the right"
+        of it in the tree.
+        """
+        return self._neighbor
 
     @property
     def children(self):
